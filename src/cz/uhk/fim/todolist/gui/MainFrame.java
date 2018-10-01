@@ -44,7 +44,7 @@ public class MainFrame extends JFrame {
         JPanel controlPanel = new JPanel(new BorderLayout());
 
         JLabel lblAddTodo = new JLabel("Zadej todo:");
-        JTextField txtAddTodo = new JTextField();s
+        JTextField txtAddTodo = new JTextField();
         JButton btnAdd = new JButton("Přidat");
 
         btnAdd.addActionListener(new ActionListener() {
