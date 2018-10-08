@@ -36,5 +36,6 @@ public class TodoItem {
 
     public void setDateTime(String dateTime) {
         this.dateTime = dateTime;
+        //TODO: pouzit toto k dodelani casu
     }
 }

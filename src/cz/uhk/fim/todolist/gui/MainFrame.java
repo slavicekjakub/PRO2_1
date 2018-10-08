@@ -63,3 +63,6 @@ public class MainFrame extends JFrame {
         add(controlPanel, BorderLayout.NORTH);
     }
 }
+
+//TODO: validace na pridani (aby to nebylo prazdne, vcetne mezer.. musi tam byt slovo) - muze se pridat i JLabel
+//TODO: Dodelat datum a cas validace HH:MM DD:MM:RRRR
