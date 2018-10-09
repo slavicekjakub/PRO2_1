@@ -50,6 +50,11 @@ public class MainFrame extends JFrame {
         btnAdd.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (txtAddTodo.getText().trim().isEmpty()){
+                    System.out.println("nesmis zadat praznou bunku, ale ani pouze mezery!!");
+                    return;
+                }
+
                 todoList.addItem(new TodoItem(txtAddTodo.getText()));
                 txtAddTodo.setText("");
                 model.setList(todoList);

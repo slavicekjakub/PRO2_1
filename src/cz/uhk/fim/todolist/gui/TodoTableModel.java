@@ -4,6 +4,9 @@ import cz.uhk.fim.todolist.model.TodoItem;
 import cz.uhk.fim.todolist.model.TodoList;
 
 import javax.swing.table.AbstractTableModel;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class TodoTableModel extends AbstractTableModel {
 
@@ -46,7 +49,15 @@ public class TodoTableModel extends AbstractTableModel {
                 item.setTitle((String) aValue);
                 break;
             case 1:
+                DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+                Date date = new Date();
                 item.setComplete((Boolean) aValue);
+                if ( item.isComplete()){
+                    item.setDateTime(dateFormat.format(date));
+                } else{
+                    item.setDateTime("");
+                }
+
                 break;
             default:
                 break;
