@@ -51,7 +51,9 @@ public class MainFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (txtAddTodo.getText().trim().isEmpty()){
-                    System.out.println("nesmis zadat praznou bunku, ale ani pouze mezery!!");
+                    String st = "nesmis zadat praznou bunku, ale ani pouze mezery!!";
+                    JOptionPane.showMessageDialog(new JFrame(), st, "Chyba",
+                            JOptionPane.ERROR_MESSAGE);
                     return;
                 }
 
@@ -68,6 +70,3 @@ public class MainFrame extends JFrame {
         add(controlPanel, BorderLayout.NORTH);
     }
 }
-
-//TODO: validace na pridani (aby to nebylo prazdne, vcetne mezer.. musi tam byt slovo) - muze se pridat i JLabel
-//TODO: Dodelat datum a cas validace HH:MM DD:MM:RRRR
